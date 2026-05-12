@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=77.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shellguard"
+version = "0.1.0"
+description = "Terminal session recorder and security auditor for command-line workflows."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "shazeus", email = "efeborazan07@gmail.com" }
+]
+keywords = [
+  "terminal",
+  "security",
+  "audit",
+  "cli",
+  "session-recorder",
+  "shell",
+  "devsecops"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: System :: Shells",
+  "Topic :: Utilities"
+]
+dependencies = [
+  "click>=8.1",
+  "rich>=13.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/shazeus/shellguard"
+Repository = "https://github.com/shazeus/shellguard"
+Issues = "https://github.com/shazeus/shellguard/issues"
+
+[project.scripts]
+shellguard = "shellguard.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["shellguard*"]
+
